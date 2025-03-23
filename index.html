@@ -1315,23 +1315,25 @@
     <script src="assets/js/function.js"></script>
 
     <script src="assets/js/whatsapp-bubble.js"></script>
-
     <script>
-      const contactForm = $("#contact-form");
+      const contactForm = document.getElementById("contact-form");
 
-      contactForm.on("submit", function (event) {
+      contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const formData = new FormData(this);
+        // Coleta dos dados do formulário com FormData
+        const formData = new FormData(contactForm);
 
+        // Converte o FormData para um objeto
         const formDataObj = {};
         formData.forEach((value, key) => {
           formDataObj[key] = value;
         });
 
+        // Envia os dados para a API do Vercel via fetch
         fetch("/api/send-email", {
           method: "POST",
-          body: JSON.stringify(formDataObj),
+          body: JSON.stringify(formDataObj), // Envia o objeto JSON
           headers: {
             "Content-Type": "application/json",
           },
