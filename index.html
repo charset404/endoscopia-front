@@ -1315,36 +1315,32 @@
     <script src="assets/js/function.js"></script>
 
     <script src="assets/js/whatsapp-bubble.js"></script>
-    <script>
-      const contactForm = document.getElementById("contact-form");
 
-      contactForm.addEventListener("submit", function (event) {
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "UDd8kCDYeoyRHPhWs",
+        });
+      })();
+
+      const contactForm = $("#contact-form");
+
+      contactForm.on("submit", function (event) {
         event.preventDefault();
 
-        // Coleta dos dados do formulário com FormData
-        const formData = new FormData(contactForm);
-
-        // Converte o FormData para um objeto
-        const formDataObj = {};
-        formData.forEach((value, key) => {
-          formDataObj[key] = value;
-        });
-
-        // Envia os dados para a API do Vercel via fetch
-        fetch("/api/send-email", {
-          method: "POST",
-          body: JSON.stringify(formDataObj), // Envia o objeto JSON
-          headers: {
-            "Content-Type": "application/json",
+        emailjs.sendForm("service_9itshwl", "template_contact", this).then(
+          () => {
+            console.log("Email enviado com sucesso!");
           },
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Email enviado com sucesso!", data);
-          })
-          .catch((error) => {
-            console.log("Erro ao enviar e-mail: ", error);
-          });
+          (error) => {
+            console.log("ERROR ao enviar E-mail: ", error);
+          }
+        );
       });
     </script>
   </body>
