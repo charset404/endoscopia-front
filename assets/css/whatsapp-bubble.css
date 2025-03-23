@@ -1,15 +1,15 @@
-body {
+.wa-endoscopia {
   font-family: "Lato", sans-serif;
   background-color: transparent;
 }
 
-a:link,
-a:visited {
+.wa-endoscopia a:link,
+.wa-endoscopia a:visited {
   color: #444;
   text-decoration: none;
   transition: all 0.4s ease-in-out;
 }
-h1 {
+.wa-endoscopia h1 {
   font-size: 20px;
   text-align: center;
   display: block;
@@ -20,7 +20,7 @@ h1 {
 }
 
 /* CSS Multiple Whatsapp Chat */
-.whatsapp-name {
+.wa-endoscopia .whatsapp-name {
   font-size: 16px;
   font-weight: 600;
   padding-bottom: 0;
@@ -28,7 +28,7 @@ h1 {
   line-height: 0.5;
 }
 
-.opacity-1 {
+.wa-endoscopia .opacity-1 {
   opacity: 1 !important;
 }
 
@@ -48,7 +48,7 @@ h1 {
   animation-duration: 1s;
   transform: scale(1);
 }
-a.show-chat-btn {
+.wa-endoscopia a.show-chat-btn {
   background: #009688;
   color: #fff;
   position: fixed;
@@ -68,7 +68,7 @@ a.show-chat-btn {
   border: 2px solid transparent;
 }
 
-.notification-badge {
+.wa-endoscopia .notification-badge {
   background: #ff4444;
   color: #fff;
   font-size: 12px;
@@ -98,115 +98,114 @@ a.show-chat-btn {
   }
 }
 
-.container-title-chat {
+.wa-endoscopia .container-title-chat {
   display: flex;
   flex-direction: column;
   gap: 5px;
   line-height: 1.3;
 }
 
-.container-title-chat .online-whatsapp {
+.wa-endoscopia .container-title-chat .online-whatsapp {
   font-size: 0.8rem;
 }
 
-a.show-chat-btn:hover {
+.wa-endoscopia a.show-chat-btn:hover {
   background: #00796b;
   box-shadow: 0 6px 20px rgba(0, 150, 136, 0.4);
   transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-a.show-chat-btn:active {
+.wa-endoscopia a.show-chat-btn:active {
   transform: translateY(0);
   box-shadow: 0 4px 15px rgba(0, 150, 136, 0.3);
 }
 
-a.show-chat-btn svg {
+.wa-endoscopia a.show-chat-btn svg {
   width: 20px;
   height: 20px;
   fill: #fff;
   transition: transform 0.3s ease;
 }
 
-a.show-chat-btn:hover svg {
+.wa-endoscopia a.show-chat-btn:hover svg {
   transform: scale(1.1);
 }
-.header-chat {
+.wa-endoscopia .header-chat {
   background: #009688;
   background: #095e54;
   color: #fff;
   padding: 20px;
 }
-.header-chat h3 {
+.wa-endoscopia .header-chat h3 {
   margin: 0 0 10px;
 }
-.header-chat p {
+.wa-endoscopia .header-chat p {
   font-size: 14px;
   line-height: 1.7;
   margin: 0;
 }
-.info-avatar {
+.wa-endoscopia .info-avatar {
   position: relative;
 }
-.info-avatar img {
+.wa-endoscopia .info-avatar img {
   border-radius: 100%;
   width: 50px;
   float: left;
   margin: 0 10px 0 0;
 }
 
-a.informasi {
+.wa-endoscopia a.informasi {
   padding: 20px;
   display: block;
   overflow: hidden;
   animation-name: showhide;
   animation-duration: 0.5s;
 }
-a.informasi:hover {
+.wa-endoscopia a.informasi:hover {
   background: #f1f1f1;
 }
-.info-chat span {
+.wa-endoscopia .info-chat span {
   display: block;
 }
-#get-label,
+.wa-endoscopia #get-label,
 span.chat-label {
   font-size: 12px;
   color: #888;
 }
-#get-nama,
+.wa-endoscopia #get-nama,
 span.chat-nama {
   margin: 5px 0 0;
   font-size: 15px;
   font-weight: 700;
   color: #222;
 }
-#get-label,
-#get-nama {
+.wa-endoscopia #get-label,
+.wa-endoscopia #get-nama {
   color: #fff;
 }
-span.my-number {
+.wa-endoscopia span.my-number {
   display: none;
 }
 
-textarea#chat-input {
+.wa-endoscopia textarea#chat-input {
   border: none;
   font-family: "Arial", sans-serif;
   width: 100%;
-  height: 20px;
   outline: none;
   resize: none;
   padding: 10px;
   font-size: 14px;
 }
 
-a#send-it {
+.wa-endoscopia a#send-it svg {
   fill: #a6a6a6;
-  height: 24px;
-  width: 24px;
+  height: 12px;
+  width: 12px;
 }
 
-a#send-it {
-  width: 30px;
+.wa-endoscopia a#send-it {
+  width: 35px;
   font-weight: 700;
   padding: 10px 10px 6px;
   background: #eee;
@@ -216,13 +215,13 @@ a#send-it {
   border-top-right-radius: 0px;
 }
 
-.first-msg {
+.wa-endoscopia .first-msg {
   background: transparent;
   padding: 30px;
   text-align: center;
 }
 
-.first-msg span {
+.wa-endoscopia .first-msg span {
   background: #e2e2e2;
   color: #333;
   font-size: 14.2px;
@@ -232,13 +231,13 @@ a#send-it {
   display: inline-block;
 }
 
-.start-chat .blanter-msg {
+.wa-endoscopia .start-chat .blanter-msg {
   display: flex;
 }
-#get-number {
+.wa-endoscopia #get-number {
   display: none;
 }
-a.close-chat {
+.wa-endoscopia a.close-chat {
   position: absolute;
   top: 5px;
   right: 15px;
@@ -295,21 +294,21 @@ a.close-chat {
   }
 }
 @media screen and (max-width: 480px) {
-  #whatsapp-chat {
+  .wa-endoscopia #whatsapp-chat {
     width: auto;
     left: 5%;
     right: 5%;
     font-size: 80%;
   }
 }
-.hide {
+.wa-endoscopia .hide {
   display: none;
   animation-name: showhide;
   animation-duration: 0.5s;
   transform: scale(1);
   opacity: 1;
 }
-.show {
+.wa-endoscopia .show {
   display: block;
   animation-name: showhide;
   animation-duration: 0.5s;
@@ -317,12 +316,12 @@ a.close-chat {
   opacity: 1;
 }
 
-.whatsapp-message-container {
+.wa-endoscopia .whatsapp-message-container {
   display: flex;
   z-index: 1;
 }
 
-.whatsapp-message {
+.wa-endoscopia .whatsapp-message {
   padding: 7px 14px 6px;
   background-color: rgb(255, 255, 255);
   border-radius: 0px 8px 8px;
@@ -337,7 +336,7 @@ a.close-chat {
   max-width: calc(100% - 66px);
 }
 
-.whatsapp-chat-body::before {
+.wa-endoscopia .whatsapp-chat-body::before {
   display: block;
   position: absolute;
   content: "";
@@ -349,18 +348,18 @@ a.close-chat {
   opacity: 0.08;
   background-image: url("../../assets/images/endoscopia/whatsapp-bg.png");
 }
-.whatsapp-chat-body {
+.wa-endoscopia .whatsapp-chat-body {
   padding: 20px 20px 20px 10px;
   background-color: rgb(230, 221, 212);
   position: relative;
 }
 
-.dAbFpq {
+.wa-endoscopia .dAbFpq {
   display: flex;
   z-index: 1;
 }
 
-.eJJEeC {
+.wa-endoscopia .eJJEeC {
   background-color: rgb(255, 255, 255);
   width: 52.5px;
   height: 32px;
@@ -377,12 +376,12 @@ a.close-chat {
   box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
 }
 
-.hFENyl {
+.wa-endoscopia .hFENyl {
   position: relative;
   display: flex;
 }
 
-.ixsrax {
+.wa-endoscopia .ixsrax {
   height: 5px;
   width: 5px;
   margin: 0px 2px;
@@ -397,7 +396,7 @@ a.close-chat {
   animation-name: ZpjSY;
 }
 
-.dRvxoz {
+.wa-endoscopia .dRvxoz {
   height: 5px;
   width: 5px;
   margin: 0px 2px;
@@ -412,7 +411,7 @@ a.close-chat {
   animation-name: hPhMsj;
 }
 
-.kAZgZq {
+.wa-endoscopia .kAZgZq {
   padding: 7px 14px 6px;
   background-color: rgb(255, 255, 255);
   border-radius: 0px 8px 8px;
@@ -427,7 +426,7 @@ a.close-chat {
   max-width: calc(100% - 66px);
 }
 
-.kAZgZq:before {
+.wa-endoscopia .kAZgZq:before {
   position: absolute;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACQUExURUxpccPDw9ra2m9vbwAAAAAAADExMf///wAAABoaGk9PT7q6uqurqwsLCycnJz4+PtDQ0JycnIyMjPf3915eXvz8/E9PT/39/RMTE4CAgAAAAJqamv////////r6+u/v7yUlJeXl5f///5ycnOXl5XNzc/Hx8f///xUVFf///+zs7P///+bm5gAAAM7Ozv///2fVensAAAAvdFJOUwCow1cBCCnqAhNAnY0WIDW2f2/hSeo99g1lBYT87vDXG8/6d8oL4sgM5szrkgl660OiZwAAAHRJREFUKM/ty7cSggAABNFVUQFzwizmjPz/39k4YuFWtm55bw7eHR6ny63+alnswT3/rIDzUSC7CrAziPYCJCsB+gbVkgDtVIDh+DsE9OTBpCtAbSBAZSEQNgWIygJ0RgJMDWYNAdYbAeKtAHODlkHIv997AkLqIVOXVU84AAAAAElFTkSuQmCC");
   background-position: 50% 50%;
@@ -440,28 +439,28 @@ a.close-chat {
   height: 19px;
 }
 
-.bMIBDo {
+.wa-endoscopia .bMIBDo {
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.4);
 }
 
-.iSpIQi {
+.wa-endoscopia .iSpIQi {
   font-size: 14px;
   line-height: 19px;
   margin-top: 4px;
   color: rgb(17, 17, 17);
 }
 
-.iSpIQi {
+.wa-endoscopia .iSpIQi {
   font-size: 14px;
   line-height: 19px;
   margin-top: 4px;
   color: rgb(17, 17, 17);
 }
 
-.cqCDVm {
+.wa-endoscopia .cqCDVm {
   text-align: right;
   margin-top: 4px;
   font-size: 12px;

@@ -2,7 +2,7 @@
   --body-background: #fff7f4;
   --primary-color: #2a353a;
   --text-color: #000000;
-  --accent-color: #fc8e60;
+  --accent-color: #f39200;
   --secondry-color: #ffffff;
   --transparent-color: #ffffff80;
   --transparent-secondry-color: #00000080;
@@ -1423,7 +1423,8 @@ header.main-header .header-sticky.active {
 
 .home-contact-form {
   padding: 100px 0 0;
-  background: url("../images/home-contact-form-bg.jpg") no-repeat center center;
+  background: url("../../assets/images/endoscopia/contact-bg.webp") no-repeat
+    center center;
   background-size: cover;
   position: relative;
   z-index: 1;
