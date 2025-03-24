@@ -168,23 +168,52 @@
         <div class="row no-gutters">
           <div class="col-md-12">
             <div class="google-map-iframe">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.837148734379!2d-49.2837424!3d-25.4437075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce54472cbda99%3A0x346949c79e76da22!2sEndoscopia%20Mais!5e0!3m2!1spt-BR!2sbr!4v1742784214965!5m2!1spt-BR!2sbr"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <div class="google-map-iframe">
+                <iframe
+                  id="googleMap"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.837148734379!2d-49.2837424!3d-25.4437075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce54472cbda99%3A0x346949c79e76da22!2sEndoscopia%20Mais!5e0!3m2!1spt-BR!2sbr!4v1742784214965!5m2!1spt-BR!2sbr"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="contact-information wow fadeInUp" data-wow-delay="0.25s">
+    <div
+      class="contact-information wow fadeInUp overflow-hidden rounded"
+      data-wow-delay="0.25s"
+    >
       <div class="container">
+        <div class="row contact-form px-0 py-0 pt-4">
+          <div class="form-group">
+            <div class="w-100 d-flex justify-content-center">
+              <h6 class="text-white pb-3">
+                Selecione o melhor local para seu atendimento.
+              </h6>
+            </div>
+            <select
+              name="specialty"
+              class="form-control specialty-select"
+              id="specialtySelect"
+              required=""
+            >
+              <option value="0" selected>Bertec Batel Office</option>
+              <option value="1">Santa Casa de Curitiba</option>
+              <option value="2">Filial Sítio Cercado</option>
+              <option value="3">Filial Colombo</option>
+              <option value="4">Clínica São Vicente</option>
+              <option value="5">Filial Lapa</option>
+            </select>
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
         <div class="row align-items-center">
           <div class="col-md-6">
-            <div class="contact-item d-flex justify-content-center">
+            <div class="contact-item">
               <div class="icon-box">
                 <i class="fa-solid fa-phone"></i>
               </div>
@@ -201,14 +230,14 @@
           </div>
 
           <div class="col-md-6">
-            <div class="contact-item d-flex justify-content-center">
+            <div class="contact-item">
               <div class="icon-box">
                 <i class="fas fa-envelope-open-text"></i>
               </div>
 
               <div class="contact-info-content">
                 <h3>Localização</h3>
-                <p class="small">
+                <p class="small" id="fullAddress">
                   Av. Sete de Setembro, 4682 - sala 02 - Batel, Curitiba - PR,
                   80240-000
                 </p>
@@ -231,7 +260,10 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <div class="contact-us-form wow fadeInUp" data-wow-delay="0.5s">
+            <div
+              class="contact-us-form wow fadeInUp overflow-hidden rounded"
+              data-wow-delay="0.5s"
+            >
               <form
                 id="contact-form"
                 action="#"
@@ -869,6 +901,51 @@
     <script src="assets/js/whatsapp-bubble.js"></script>
 
     <script src="assets/js/emailjs.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      const addresses = {
+        0: {
+          address:
+            "Av. Sete de Setembro, 4682 - sala 02 - Batel, Curitiba - PR, 80240-000",
+          map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.837148734379!2d-49.2837424!3d-25.4437075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce54472cbda99%3A0x346949c79e76da22!2sEndoscopia%20Mais!5e0!3m2!1spt-BR!2sbr!4v1742784214965!5m2!1spt-BR!2sbr",
+        },
+        1: {
+          address: "Praça Rui Barbosa, 694 - Centro Curitiba - PR, 80010-030",
+          map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1273.8637054227672!2d-49.27302838591668!3d-25.437238556223587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce46df5ad031b%3A0x71bd93f77b76a94!2sPra%C3%A7a%20Rui%20Barbosa%2C%20694%20-%20Centro%2C%20Curitiba%20-%20PR%2C%2080010-030!5e0!3m2!1spt-BR!2sbr!4v1742795283844!5m2!1spt-BR!2sbr",
+        },
+        2: {
+          address:
+            "R. dos Pioneiros, 1381 - Sítio Cercado Curitiba - PR, 81910-080",
+          map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1236.609395775724!2d-49.26644174067811!3d-25.533420558496932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcfb98faa4eadf%3A0x7d9bd714bdcce6d3!2sR.%20dos%20Pioneiros%2C%201381%20-%20S%C3%ADtio%20Cercado%2C%20Curitiba%20-%20PR%2C%2081910-080!5e0!3m2!1spt-BR!2sbr!4v1742795326720!5m2!1spt-BR!2sbr",
+        },
+        3: {
+          address: "R. Dorval Ceccon, 525 - Fatima Colombo - PR, 83405-030",
+          map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.3369342338304!2d-49.18603352749698!3d-25.36051773266241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce8945350d6cf%3A0x765897a754b4ba9c!2sR.%20Dorval%20Ceccon%2C%20525%20-%20Fatima%2C%20Colombo%20-%20PR%2C%2083405-030!5e0!3m2!1spt-BR!2sbr!4v1742795538941!5m2!1spt-BR!2sbr",
+        },
+        4: {
+          address:
+            "R. São Vicente de Paulo, 250 - Centro Araucária - PR, 83702-050",
+          map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d583.336752575992!2d-49.39849275990934!3d-25.58786367536311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd0248fe13a86b%3A0x7bb1dd8fde4f8c06!2sR.%20S%C3%A3o%20Vicente%20de%20Paulo%2C%20250%20-%20Centro%2C%20Arauc%C3%A1ria%20-%20PR%2C%2083702-050!5e0!3m2!1spt-BR!2sbr!4v1742795569751!5m2!1spt-BR!2sbr",
+        },
+        5: {
+          address:
+            "R. Ten. Henrique dos Santos, 360 - Centro Lapa - PR, 83750-000",
+          map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d436.3421013789252!2d-49.714453384418036!3d-25.769797819738276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd75142c9178d7%3A0xf22c5927e826ae73!2sR.%20Ten.%20Henrique%20dos%20Santos%2C%20360%20-%20Centro%2C%20Lapa%20-%20PR%2C%2083750-000!5e0!3m2!1spt-BR!2sbr!4v1742795606337!5m2!1spt-BR!2sbr",
+        },
+      };
+
+      $("#specialtySelect").on("change", function () {
+        const selected = $(this).val();
+        const data = addresses[selected];
+
+        if (data) {
+          $("#fullAddress").text(data.address);
+          $("#googleMap").attr("src", data.map);
+        }
+      });
+    </script>
 
     <script>
       (function () {
