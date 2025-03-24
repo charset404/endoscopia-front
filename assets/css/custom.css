@@ -1430,6 +1430,43 @@ header.main-header .header-sticky.active {
   z-index: 1;
 }
 
+.btn-default:disabled {
+  color: #797979;
+  border: 2px solid #8f8f8f;
+}
+
+.testiominal-link {
+  color: var(--accent-color);
+}
+
+.testiominal-link:hover {
+  color: var(--primary-color);
+}
+
+.btn-default:disabled::before {
+  color: #787878;
+}
+
+.contact-form .form-group .btn-default:disabled::before {
+  display: none !important;
+}
+
+.contact-form .form-group .btn-default:disabled {
+  padding: 10px 20px 10px 20px;
+}
+
+.btn-default:disabled:hover::after {
+  background: transparent !important;
+}
+
+.contact-form .form-group .btn-default:disabled:hover::after {
+  background: transparent !important;
+}
+
+.loading-width {
+  max-width: 25px;
+}
+
 .home-contact-form::after {
   content: "";
   position: absolute;
@@ -1744,10 +1781,10 @@ header.main-header .header-sticky.active {
 
 .subpage-header {
   padding: 150px 0 100px;
-  background: var(--primary-color) url("../images/half-shape.png") no-repeat 6%
-    100%;
-  background-size: 19% auto;
   position: relative;
+  background-image: url("../../assets/images/endoscopia/about-header.webp");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .subpage-header::before {
@@ -1755,11 +1792,9 @@ header.main-header .header-sticky.active {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 300px;
+  width: 100%;
   height: 100%;
-  background: url("../images/half-circle-img.png") no-repeat 50% 100%;
-  background-size: 70% auto;
-  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .subpage-header-box {
@@ -3711,11 +3746,11 @@ header.main-header .header-sticky.active {
   .footer-contact-box {
     padding-right: 0px;
   }
-
+  /* 
   .subpage-header {
     padding: 100px 0 50px;
     background-size: 20% auto;
-  }
+  } */
 
   .subpage-header::before {
     width: 220px;
@@ -4318,14 +4353,15 @@ header.main-header .header-sticky.active {
     margin-top: 30px;
   }
 
-  .subpage-header {
+  /* .subpage-header {
     padding: 80px 0 50px;
     background-size: 35% auto;
-  }
+  } */
 
   .subpage-header::before {
-    background: url(../images/half-circle-img.png) no-repeat 80% 100%;
-    background-size: 60% auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
   }
 
   .subpage-header-box h1 {
@@ -4563,4 +4599,8 @@ header.main-header .header-sticky.active {
   .error-page-heading h2 {
     font-size: 28px;
   }
+}
+
+.text-muted-custom {
+  color: var(--transparent-color) !important;
 }
